@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>嗨购</title>
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+<div class="nav">
+	<img src="images/others01.png" />
+</div>
+<div class="swiper-container">
+	<div class="swiper-wrapper">
+	    <div class="swiper-slide">
+	    	<img src="images/banner01.png">
+	    </div>
+	    <div class="swiper-slide">
+	    	<img src="images/banner02.png">
+	    </div>
+	    <div class="swiper-slide">
+	    	<img src="images/banner03.png">
+	    </div>
+	</div>
+	<!-- 如果需要分页器 -->
+	<div class="swiper-pagination"></div>
+
+	<!-- 如果需要导航按钮 -->
+	<div class="swiper-button-prev"></div>
+	<div class="swiper-button-next"></div>
+</div>
+<div class="content"> 
+	<img src="images/others03.png" />
+</div>
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	  var mySwiper = new Swiper ('.swiper-container', {
+	  	slidesPerView: 1,
+      	spaceBetween: 0,
+	    loop: true, // 循环模式，true为无限循环
+	    
+	    // 如果需要分页器
+	    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      	},
+      	//自动播放
+	    autoplay: {
+        delay: 5000,//自动播放间隔ms
+        disableOnInteraction: false,
+      	},
+	    // 如果需要前进后退按钮
+	    navigation: {
+	      nextEl: '.swiper-button-next',
+	      prevEl: '.swiper-button-prev',
+	    },
+	  }); 		
+	});	
+</script>
+</body>
+</html>
